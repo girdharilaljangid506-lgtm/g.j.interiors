@@ -46,6 +46,7 @@ G.J.INTERIORS DESIGN STUDIO make a website with anemation
 - Converted experience into public business website structure with multi-page routing: Home, About, Founder, Services, Projects, Testimonials, Contact, Privacy, Terms.
 - Added public-facing lead actions as requested: contact form + WhatsApp + Call buttons (including floating quick actions).
 - Added launch-readiness branding elements: SEO meta tags, OG/Twitter social preview metadata, favicon, and legal footer links.
+- Added secrets hygiene follow-up: removed raw SendGrid key from `backend/.env` template value (placeholder retained for safe sharing/export).
 
 ## Prioritized Backlog
 ### P0
