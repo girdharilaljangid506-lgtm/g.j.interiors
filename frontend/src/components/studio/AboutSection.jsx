@@ -43,9 +43,9 @@ export const AboutSection = () => {
             aria-hidden="true"
           />
           <img
-            src="https://customer-assets.emergentagent.com/job_gj-design-lab/artifacts/e5oy64e6_1.png"
+            src="https://customer-assets.emergentagent.com/job_gj-design-lab/artifacts/6f4anuyw_ChatGPT%20Image%20Mar%208%2C%202026%2C%2009_14_07%20PM.png"
             alt="Founder portrait of G.J. Interiors"
-            className="aspect-[4/5] w-full border border-white/10 object-cover object-left"
+            className="aspect-[4/5] w-full border border-white/10 object-cover object-center"
             data-testid="about-image"
           />
         </Reveal>
