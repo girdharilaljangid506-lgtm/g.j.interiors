@@ -5,7 +5,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 from pathlib import Path
-from pydantic import BaseModel, Field, ConfigDict
+from pydantic import BaseModel, Field, ConfigDict, EmailStr
 from typing import List
 import uuid
 from datetime import datetime, timezone
@@ -37,6 +37,26 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+
+class InquiryBase(BaseModel):
+    name: str
+    email: EmailStr
+    phone: str | None = None
+    project_type: str
+    budget: str | None = None
+    message: str
+
+
+class InquiryCreate(InquiryBase):
+    pass
+
+
+class Inquiry(InquiryBase):
+    model_config = ConfigDict(extra="ignore")
+
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
@@ -65,6 +85,28 @@ async def get_status_checks():
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
     
     return status_checks
+
+
+@api_router.post("/inquiries", response_model=Inquiry)
+async def create_inquiry(payload: InquiryCreate):
+    inquiry_obj = Inquiry(**payload.model_dump())
+
+    doc = inquiry_obj.model_dump()
+    doc["created_at"] = doc["created_at"].isoformat()
+
+    _ = await db.inquiries.insert_one(doc)
+    return inquiry_obj
+
+
+@api_router.get("/inquiries", response_model=List[Inquiry])
+async def get_inquiries():
+    inquiries = await db.inquiries.find({}, {"_id": 0}).sort("created_at", -1).to_list(200)
+
+    for inquiry in inquiries:
+        if isinstance(inquiry.get("created_at"), str):
+            inquiry["created_at"] = datetime.fromisoformat(inquiry["created_at"])
+
+    return inquiries
 
 # Include the router in the main app
 app.include_router(api_router)

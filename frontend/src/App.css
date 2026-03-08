@@ -1,34 +1,59 @@
-.App-logo {
-    height: 40vmin;
+.studio-app {
+    position: relative;
+    overflow-x: hidden;
+    background: #0a0a0a;
+}
+
+.studio-app::before {
+    content: "";
+    position: fixed;
+    inset: 0;
     pointer-events: none;
+    background-image: radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.15), transparent 38%),
+        radial-gradient(circle at 85% 10%, rgba(229, 208, 172, 0.12), transparent 32%),
+        radial-gradient(circle at 70% 80%, rgba(212, 175, 55, 0.12), transparent 36%);
+    filter: blur(20px);
+    z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
+.studio-app::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0.2;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+.hero-image-pulse {
+    animation: heroDrift 14s ease-in-out infinite alternate;
+}
+
+.floating-glow {
+    animation: floatingGlow 8s ease-in-out infinite;
+}
+
+@keyframes heroDrift {
+    0% {
+        transform: scale(1.05) translateY(0px);
+    }
+    50% {
+        transform: scale(1.1) translateY(-18px);
+    }
+    100% {
+        transform: scale(1.08) translateY(8px);
     }
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
+@keyframes floatingGlow {
+    0%,
+    100% {
+        transform: translateY(0px);
+        opacity: 0.35;
     }
-    to {
-        transform: rotate(360deg);
+    50% {
+        transform: translateY(-14px);
+        opacity: 0.6;
     }
 }
