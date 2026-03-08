@@ -53,39 +53,51 @@ export const services = [
 
 export const portfolioItems = [
   {
-    title: "Monolith Living",
-    category: "Ultra-modern Residence",
-    source: "Instagram Showcase",
-    image: "https://images.unsplash.com/photo-1678686425633-84fc103e2727?q=85&w=1080",
+    title: "Living Room Statement",
+    category: "Residential - Living",
+    source: "Client Project",
+    image:
+      "https://customer-assets.emergentagent.com/job_gj-design-lab/artifacts/ho6ted5d_LIVINGROOM%20AND%20KITCHEN%20%282%29.jpg",
     gridClass: "md:col-span-2 md:row-span-2",
   },
   {
-    title: "Noir Kitchen Atelier",
-    category: "Bespoke Kitchen",
-    source: "Instagram Showcase",
-    image: "https://images.unsplash.com/photo-1761766917170-42c4cecfee0b?q=85&w=1080",
+    title: "Open Lounge Axis",
+    category: "Residential - Living",
+    source: "Client Project",
+    image:
+      "https://customer-assets.emergentagent.com/job_gj-design-lab/artifacts/kefymso2_LIVINGROOM%20AND%20KITCHEN%20%283%29.jpg",
     gridClass: "md:col-span-1 md:row-span-1",
   },
   {
-    title: "Velvet Bedroom Suite",
-    category: "Private Suite",
-    source: "Instagram Showcase",
-    image: "https://images.unsplash.com/photo-1553172574-1eb37430181e?q=85&w=1080",
+    title: "Compact Kitchen Elegance",
+    category: "Residential - Kitchen",
+    source: "Client Project",
+    image:
+      "https://customer-assets.emergentagent.com/job_gj-design-lab/artifacts/rcmywmzt_LIVINGROOM%20AND%20KITCHEN%20%285%29.jpg",
     gridClass: "md:col-span-1 md:row-span-1",
   },
   {
-    title: "Sculpted Exterior",
-    category: "Architectural Frontage",
-    source: "Instagram Showcase",
-    image: "https://images.unsplash.com/photo-1761442137960-a89d97ab6b27?q=85&w=1080",
+    title: "Master Bedroom Mood",
+    category: "Residential - Bedroom",
+    source: "Client Project",
+    image:
+      "https://customer-assets.emergentagent.com/job_gj-design-lab/artifacts/xi73qebv_SBR%20%281%29.jpg",
     gridClass: "md:col-span-1 md:row-span-2",
   },
   {
-    title: "Gallery Lounge",
-    category: "Feature Living Hall",
-    source: "Instagram Showcase",
-    image: "https://images.unsplash.com/photo-1748346918817-0b1b6b2f9bab?q=85&w=1080",
+    title: "Bedroom Soft Luxe",
+    category: "Residential - Bedroom",
+    source: "Client Project",
+    image:
+      "https://customer-assets.emergentagent.com/job_gj-design-lab/artifacts/xdz38uod_SBR%20%282%29.jpg",
     gridClass: "md:col-span-2 md:row-span-1",
+  },
+  {
+    title: "Commercial Accent Concept",
+    category: "Commercial - Feature Space",
+    source: "Studio Concept",
+    image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=85&w=1080",
+    gridClass: "md:col-span-1 md:row-span-1",
   },
 ];
 

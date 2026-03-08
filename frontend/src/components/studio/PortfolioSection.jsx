@@ -18,7 +18,7 @@ export const PortfolioSection = () => {
             Selected Projects
           </p>
           <h2 className="text-3xl text-studio-text sm:text-4xl" data-testid="portfolio-heading-text">
-            A cinematic bento gallery of project data curated from your Instagram direction.
+            A cinematic mix of your real project portfolio and studio concepts.
           </h2>
           <a
             href={brandConfig.instagramUrl}
