@@ -2,6 +2,14 @@ import { Instagram } from "lucide-react";
 import { brandConfig, navItems } from "@/data/studioContent";
 
 export const StudioFooter = () => {
+  const handleInstagramOpen = (event) => {
+    event.preventDefault();
+    const popup = window.open(brandConfig.instagramUrl, "_blank", "noopener,noreferrer");
+    if (!popup) {
+      window.location.href = brandConfig.instagramUrl;
+    }
+  };
+
   return (
     <footer className="border-t border-white/10 py-10" data-testid="studio-footer">
       <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-6 px-6 lg:px-10">
@@ -24,6 +32,9 @@ export const StudioFooter = () => {
           </p>
           <a
             href={brandConfig.instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleInstagramOpen}
             className="mt-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-studio-champagne transition-colors duration-300 hover:text-white"
             data-testid="footer-instagram-link"
           >

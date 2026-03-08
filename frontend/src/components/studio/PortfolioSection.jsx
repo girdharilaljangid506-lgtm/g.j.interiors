@@ -2,6 +2,14 @@ import { Reveal } from "@/components/studio/Reveal";
 import { brandConfig, portfolioItems } from "@/data/studioContent";
 
 export const PortfolioSection = () => {
+  const handleInstagramOpen = (event) => {
+    event.preventDefault();
+    const popup = window.open(brandConfig.instagramUrl, "_blank", "noopener,noreferrer");
+    if (!popup) {
+      window.location.href = brandConfig.instagramUrl;
+    }
+  };
+
   return (
     <section id="portfolio" className="py-24 md:py-32" data-testid="portfolio-section">
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-10">
@@ -14,6 +22,9 @@ export const PortfolioSection = () => {
           </h2>
           <a
             href={brandConfig.instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleInstagramOpen}
             className="inline-flex items-center border border-studio-champagne/40 px-4 py-2 text-xs uppercase tracking-[0.2em] text-studio-champagne transition-colors duration-300 hover:bg-studio-champagne/10"
             data-testid="portfolio-instagram-profile-link"
           >

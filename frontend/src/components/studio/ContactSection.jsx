@@ -54,6 +54,14 @@ export const ContactSection = () => {
     }
   };
 
+  const handleInstagramOpen = (event) => {
+    event.preventDefault();
+    const popup = window.open(brandConfig.instagramUrl, "_blank", "noopener,noreferrer");
+    if (!popup) {
+      window.location.href = brandConfig.instagramUrl;
+    }
+  };
+
   return (
     <section id="contact" className="py-24 md:py-32" data-testid="contact-section">
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 lg:grid-cols-[1fr,1.15fr] lg:px-10">
@@ -101,6 +109,9 @@ export const ContactSection = () => {
 
             <a
               href={brandConfig.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleInstagramOpen}
               className="mt-2 inline-flex items-center gap-2 text-sm text-studio-champagne transition-colors duration-300 hover:text-white"
               data-testid="contact-instagram-link"
             >

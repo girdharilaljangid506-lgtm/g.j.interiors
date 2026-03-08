@@ -32,6 +32,7 @@ G.J.INTERIORS DESIGN STUDIO make a website with anemation
 - Fixed Instagram link behavior by using canonical URL with trailing slash and direct navigation (verified click flow reaches Instagram login/profile path).
 - Added dedicated floating Instagram icon button at right-center for better social engagement and tested click navigation.
 - Integrated SendGrid email notification workflow: every new inquiry now sends an email alert to `g.j.interiornavsari@gmail.com` while still saving inquiry data in MongoDB even if email fails.
+- Hardened Instagram link handling with popup + fallback redirect logic across Contact, Portfolio, Footer, and floating Instagram button for better cross-browser reliability.
 
 ## Prioritized Backlog
 ### P0

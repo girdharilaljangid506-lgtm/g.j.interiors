@@ -3,9 +3,20 @@ import { Instagram } from "lucide-react";
 import { brandConfig } from "@/data/studioContent";
 
 export const FloatingInstagramButton = () => {
+  const handleInstagramOpen = (event) => {
+    event.preventDefault();
+    const popup = window.open(brandConfig.instagramUrl, "_blank", "noopener,noreferrer");
+    if (!popup) {
+      window.location.href = brandConfig.instagramUrl;
+    }
+  };
+
   return (
     <motion.a
       href={brandConfig.instagramUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={handleInstagramOpen}
       aria-label="Follow on Instagram"
       data-testid="floating-instagram-button"
       className="fixed right-3 top-1/2 z-[60] -translate-y-1/2 border border-studio-champagne/60 bg-black/75 p-3 text-studio-champagne shadow-[0_0_25px_rgba(212,175,55,0.35)] backdrop-blur transition-colors duration-300 hover:bg-studio-champagne hover:text-black sm:right-4"
