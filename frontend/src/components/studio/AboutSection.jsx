@@ -16,7 +16,7 @@ export const AboutSection = () => {
             Designing spatial stories with precision, mood, and timeless detail.
           </h2>
           <p className="text-base text-studio-text/80 md:text-lg" data-testid="about-description-text">
-            At G.J. Interiors Design Studio, every project begins with your lifestyle and ends
+            At G.J.INTERIORS DESIGN STUDIO, every project begins with your lifestyle and ends
             with a deeply personalized environment. We combine architectural intelligence with
             expressive material palettes to deliver spaces that perform and inspire.
           </p>

@@ -50,7 +50,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.9, delay: 0.2 }}
           data-testid="hero-subheading-text"
         >
-          G.J. Interiors crafts luxury residential and commercial environments through
+          G.J.INTERIORS DESIGN STUDIO crafts luxury residential and commercial environments through
           mood, material, and movement.
         </motion.p>
 

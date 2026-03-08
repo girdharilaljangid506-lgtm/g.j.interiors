@@ -38,6 +38,7 @@ G.J.INTERIORS DESIGN STUDIO make a website with anemation
 - Updated About Studio image to a founder-portrait style photo (as requested) for a stronger personal brand presence.
 - Replaced About Studio image with the user-uploaded founder photo asset for brand authenticity.
 - Updated Hero section ("Cinematic Interior Design Studio") background with user-uploaded interior project image.
+- Updated brand naming across site to requested company name format: `G.J.INTERIORS DESIGN STUDIO`.
 
 ## Prioritized Backlog
 ### P0

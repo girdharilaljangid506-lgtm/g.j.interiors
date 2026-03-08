@@ -7,8 +7,8 @@ export const navItems = [
 ];
 
 export const brandConfig = {
-  name: "G.J. Interiors",
-  fullName: "G.J. Interiors Design Studio",
+  name: "G.J.INTERIORS DESIGN STUDIO",
+  fullName: "G.J.INTERIORS DESIGN STUDIO",
   logoUrl: "",
   instagramUrl: "https://www.instagram.com/g.j._interiors_design_studio/",
   instagramHandle: "@g.j._interiors_design_studio",
