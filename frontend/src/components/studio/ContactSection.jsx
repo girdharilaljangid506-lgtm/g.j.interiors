@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/sonner";
-import { budgetOptions, projectTypeOptions } from "@/data/studioContent";
+import { Instagram } from "lucide-react";
+import { brandConfig, budgetOptions, projectTypeOptions } from "@/data/studioContent";
 
 const initialFormState = {
   name: "",
@@ -72,6 +73,16 @@ export const ContactSection = () => {
             <p className="text-sm text-studio-text/80" data-testid="contact-email-text">Email: hello@gjinteriors.studio</p>
             <p className="text-sm text-studio-text/80" data-testid="contact-phone-text">Phone: +91 90000 11223</p>
             <p className="text-sm text-studio-text/80" data-testid="contact-location-text">Location: Ahmedabad, India</p>
+            <a
+              href={brandConfig.instagramUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 pt-2 text-sm text-studio-champagne transition-colors duration-300 hover:text-white"
+              data-testid="contact-instagram-link"
+            >
+              <Instagram className="h-4 w-4" />
+              <span data-testid="contact-instagram-handle-text">{brandConfig.instagramHandle}</span>
+            </a>
           </div>
         </Reveal>
 

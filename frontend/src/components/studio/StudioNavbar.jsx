@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { navItems } from "@/data/studioContent";
+import { brandConfig, navItems } from "@/data/studioContent";
 
 export const StudioNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,10 +27,18 @@ export const StudioNavbar = () => {
       <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-4 lg:px-10">
         <a
           href="#hero"
-          className="text-sm font-semibold uppercase tracking-[0.35em] text-studio-champagne"
+          className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.35em] text-studio-champagne"
           data-testid="studio-brand-link"
         >
-          G.J. Interiors
+          {brandConfig.logoUrl ? (
+            <img
+              src={brandConfig.logoUrl}
+              alt={`${brandConfig.name} logo`}
+              className="h-10 w-auto object-contain"
+              data-testid="studio-logo-image-navbar"
+            />
+          ) : null}
+          <span data-testid="studio-brand-name-navbar">{brandConfig.name}</span>
         </a>
 
         <nav

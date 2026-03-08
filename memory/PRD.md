@@ -25,11 +25,15 @@ G.J.INTERIORS DESIGN STUDIO make a website with anemation
 - Added comprehensive `data-testid` attributes on interactive and key user-facing elements.
 - Installed and used `framer-motion`; reused existing `lucide-react` icons.
 - Automated backend and frontend validation completed successfully.
+- Added Instagram handle/link in Contact section and Footer: `@g.j._interiors_design_studio`.
+- Updated portfolio messaging to align with Instagram-driven project showcase direction and added direct profile CTA.
+- Added logo-ready structure in Navbar and Footer (`logoUrl` config) so uploaded logo can be plugged in instantly.
 
 ## Prioritized Backlog
 ### P0
 - Add admin-safe inquiry dashboard for studio team to review incoming leads.
 - Add spam protection/rate limiting to inquiry form endpoint.
+- Connect final uploaded brand logo asset to `brandConfig.logoUrl`.
 
 ### P1
 - Add project detail modal pages with before/after storytelling.
