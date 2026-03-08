@@ -37,6 +37,7 @@ G.J.INTERIORS DESIGN STUDIO make a website with anemation
 - Replaced portfolio media with user-provided real project photos and updated layout to a mixed composition (1 large focal card + supporting cards) with 6 total items.
 - Updated About Studio image to a founder-portrait style photo (as requested) for a stronger personal brand presence.
 - Replaced About Studio image with the user-uploaded founder photo asset for brand authenticity.
+- Updated Hero section ("Cinematic Interior Design Studio") background with user-uploaded interior project image.
 
 ## Prioritized Backlog
 ### P0

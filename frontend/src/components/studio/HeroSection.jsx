@@ -12,7 +12,7 @@ export const HeroSection = () => {
     >
       <div className="absolute inset-0" aria-hidden="true">
         <img
-          src="https://images.unsplash.com/photo-1663811396672-83dd3f32f312?q=85&w=1920"
+          src="https://customer-assets.emergentagent.com/job_gj-design-lab/artifacts/w04yttty_LIVINGROOM%20AND%20KITCHEN%20%283%29.jpg"
           alt="Cinematic interior by G.J. Interiors"
           className="hero-image-pulse h-full w-full object-cover object-center"
           data-testid="hero-background-image"
