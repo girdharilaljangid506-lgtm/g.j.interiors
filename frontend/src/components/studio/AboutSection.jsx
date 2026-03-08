@@ -43,8 +43,8 @@ export const AboutSection = () => {
             aria-hidden="true"
           />
           <img
-            src="https://images.unsplash.com/photo-1748346918817-0b1b6b2f9bab?q=85&w=1080"
-            alt="Interior design studio workspace"
+            src="https://images.unsplash.com/photo-1696453423785-727e165462c1?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=1080"
+            alt="Founder portrait in interior design studio"
             className="aspect-[4/5] w-full border border-white/10 object-cover object-center"
             data-testid="about-image"
           />
