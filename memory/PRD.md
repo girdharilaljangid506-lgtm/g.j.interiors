@@ -33,6 +33,7 @@ G.J.INTERIORS DESIGN STUDIO make a website with anemation
 - Added dedicated floating Instagram icon button at right-center for better social engagement and tested click navigation.
 - Integrated SendGrid email notification workflow: every new inquiry now sends an email alert to `g.j.interiornavsari@gmail.com` while still saving inquiry data in MongoDB even if email fails.
 - Hardened Instagram link handling with popup + fallback redirect logic across Contact, Portfolio, Footer, and floating Instagram button for better cross-browser reliability.
+- Updated Instagram strategy to always open in a separate tab/window to avoid iframe/embed blocking (`ERR_BLOCKED_BY_RESPONSE`) inside preview environments.
 
 ## Prioritized Backlog
 ### P0

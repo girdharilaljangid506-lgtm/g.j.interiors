@@ -6,7 +6,7 @@ export const PortfolioSection = () => {
     event.preventDefault();
     const popup = window.open(brandConfig.instagramUrl, "_blank", "noopener,noreferrer");
     if (!popup) {
-      window.location.href = brandConfig.instagramUrl;
+      console.warn("Instagram popup blocked. Please allow popups and try again.");
     }
   };
 
