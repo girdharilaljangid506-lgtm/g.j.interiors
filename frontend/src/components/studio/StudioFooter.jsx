@@ -1,5 +1,6 @@
 import { Instagram } from "lucide-react";
-import { brandConfig, navItems } from "@/data/studioContent";
+import { NavLink } from "react-router-dom";
+import { brandConfig, legalLinks, navItems } from "@/data/studioContent";
 
 export const StudioFooter = () => {
   const handleInstagramOpen = (event) => {
@@ -52,14 +53,27 @@ export const StudioFooter = () => {
 
         <nav className="flex flex-wrap items-center gap-4" data-testid="footer-nav-links">
           {navItems.map((item) => (
-            <a
+            <NavLink
               key={item.href}
-              href={item.href}
+              to={item.href}
               className="text-xs uppercase tracking-[0.2em] text-studio-text/60 transition-colors duration-300 hover:text-studio-champagne"
               data-testid={`footer-${item.testId}`}
             >
               {item.label}
-            </a>
+            </NavLink>
+          ))}
+        </nav>
+
+        <nav className="flex flex-wrap items-center gap-4" data-testid="footer-legal-links">
+          {legalLinks.map((item) => (
+            <NavLink
+              key={item.href}
+              to={item.href}
+              className="text-xs uppercase tracking-[0.15em] text-studio-text/50 transition-colors duration-300 hover:text-studio-champagne"
+              data-testid={item.testId}
+            >
+              {item.label}
+            </NavLink>
           ))}
         </nav>
       </div>

@@ -1,9 +1,16 @@
 export const navItems = [
-  { label: "About", href: "#about", testId: "nav-about-link" },
-  { label: "Services", href: "#services", testId: "nav-services-link" },
-  { label: "Portfolio", href: "#portfolio", testId: "nav-portfolio-link" },
-  { label: "Process", href: "#process", testId: "nav-process-link" },
-  { label: "Contact", href: "#contact", testId: "nav-contact-link" },
+  { label: "Home", href: "/", testId: "nav-home-link" },
+  { label: "About", href: "/about", testId: "nav-about-link" },
+  { label: "Founder", href: "/founder", testId: "nav-founder-link" },
+  { label: "Services", href: "/services", testId: "nav-services-link" },
+  { label: "Projects", href: "/projects", testId: "nav-projects-link" },
+  { label: "Testimonials", href: "/testimonials", testId: "nav-testimonials-link" },
+  { label: "Contact", href: "/contact", testId: "nav-contact-link" },
+];
+
+export const legalLinks = [
+  { label: "Privacy Policy", href: "/privacy", testId: "footer-privacy-link" },
+  { label: "Terms & Conditions", href: "/terms", testId: "footer-terms-link" },
 ];
 
 export const brandConfig = {
@@ -25,7 +32,7 @@ export const brandConfig = {
 export const founderProfile = {
   name: "GIRDHARI LAL SUTHAR",
   role: "Founder & Interior Designer",
-  studio: "G.J. Interiors Design Studio",
+  studio: "G.J.INTERIORS DESIGN STUDIO",
   bio: "I am an experienced Interior Designer with over 8 years of professional expertise in creating functional, aesthetic, and customized interior spaces. Based in Navsari, I lead G.J. Interiors Design Studio, where we specialize in delivering high-quality interior design solutions for both residential and commercial projects.",
   experience: "8 Years",
   imageUrl:

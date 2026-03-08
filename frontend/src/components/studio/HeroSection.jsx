@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { heroStats } from "@/data/studioContent";
 
@@ -65,9 +66,9 @@ export const HeroSection = () => {
             className="rounded-none bg-studio-champagne px-8 py-6 text-xs font-bold uppercase tracking-[0.2em] text-black hover:bg-white"
             data-testid="hero-view-portfolio-button"
           >
-            <a href="#portfolio" data-testid="hero-view-portfolio-link">
+            <Link to="/projects" data-testid="hero-view-portfolio-link">
               View Portfolio
-            </a>
+            </Link>
           </Button>
 
           <Button
@@ -76,9 +77,9 @@ export const HeroSection = () => {
             className="rounded-none border-studio-champagne/40 bg-black/40 px-8 py-6 text-xs font-semibold uppercase tracking-[0.2em] text-studio-champagne hover:bg-studio-champagne/10"
             data-testid="hero-start-project-button"
           >
-            <a href="#contact" data-testid="hero-start-project-link">
+            <Link to="/contact" data-testid="hero-start-project-link">
               Start Your Project <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
+            </Link>
           </Button>
         </motion.div>
 

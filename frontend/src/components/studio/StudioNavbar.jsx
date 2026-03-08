@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { brandConfig, navItems } from "@/data/studioContent";
 
@@ -25,8 +26,8 @@ export const StudioNavbar = () => {
       }`}
     >
       <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-4 lg:px-10">
-        <a
-          href="#hero"
+        <NavLink
+          to="/"
           className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.35em] text-studio-champagne"
           data-testid="studio-brand-link"
         >
@@ -39,21 +40,26 @@ export const StudioNavbar = () => {
             />
           ) : null}
           <span data-testid="studio-brand-name-navbar">{brandConfig.name}</span>
-        </a>
+        </NavLink>
 
         <nav
-          className="flex flex-wrap items-center justify-center gap-4 sm:gap-6"
+          className="flex flex-wrap items-center justify-center gap-3 sm:gap-4"
           data-testid="studio-navbar-links"
         >
           {navItems.map((item) => (
-            <a
+            <NavLink
               key={item.href}
-              href={item.href}
-              className="text-xs uppercase tracking-[0.2em] text-studio-text/80 transition-colors duration-300 hover:text-studio-champagne"
+              to={item.href}
+              end={item.href === "/"}
+              className={({ isActive }) =>
+                `text-[11px] uppercase tracking-[0.18em] transition-colors duration-300 ${
+                  isActive ? "text-studio-champagne" : "text-studio-text/80 hover:text-studio-champagne"
+                }`
+              }
               data-testid={item.testId}
             >
               {item.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
 
@@ -62,9 +68,9 @@ export const StudioNavbar = () => {
           className="rounded-none border border-studio-champagne/60 bg-studio-champagne px-6 py-2 text-[11px] font-bold uppercase tracking-[0.25em] text-black hover:bg-white"
           data-testid="navbar-book-consultation-button"
         >
-          <a href="#contact" data-testid="navbar-book-consultation-link">
+          <NavLink to="/contact" data-testid="navbar-book-consultation-link">
             Book Consultation
-          </a>
+          </NavLink>
         </Button>
       </div>
     </motion.header>

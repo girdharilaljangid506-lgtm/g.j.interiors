@@ -43,6 +43,9 @@ G.J.INTERIORS DESIGN STUDIO make a website with anemation
 - Finalized About Studio image with the latest user-uploaded office portrait asset.
 - Added new Founder Portfolio section immediately after About, including uploaded founder photo, full profile details, experience, specializations, achievements, and WhatsApp Founder CTA.
 - Added deployment/setup deliverables for download: `/app/SETUP.md` (full manual Linux VPS guide) and `/app/setup.sh` (automated setup script).
+- Converted experience into public business website structure with multi-page routing: Home, About, Founder, Services, Projects, Testimonials, Contact, Privacy, Terms.
+- Added public-facing lead actions as requested: contact form + WhatsApp + Call buttons (including floating quick actions).
+- Added launch-readiness branding elements: SEO meta tags, OG/Twitter social preview metadata, favicon, and legal footer links.
 
 ## Prioritized Backlog
 ### P0
