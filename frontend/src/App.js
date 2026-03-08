@@ -10,6 +10,7 @@ import { ProcessSection } from "@/components/studio/ProcessSection";
 import { TestimonialsSection } from "@/components/studio/TestimonialsSection";
 import { ContactSection } from "@/components/studio/ContactSection";
 import { StudioFooter } from "@/components/studio/StudioFooter";
+import { FloatingInstagramButton } from "@/components/studio/FloatingInstagramButton";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <ContactSection />
         </main>
         <StudioFooter />
+        <FloatingInstagramButton />
         <Toaster richColors position="top-right" />
       </div>
     </ThemeProvider>
