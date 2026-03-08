@@ -36,6 +36,7 @@ G.J.INTERIORS DESIGN STUDIO make a website with anemation
 - Updated Instagram strategy to always open in a separate tab/window to avoid iframe/embed blocking (`ERR_BLOCKED_BY_RESPONSE`) inside preview environments.
 - Replaced portfolio media with user-provided real project photos and updated layout to a mixed composition (1 large focal card + supporting cards) with 6 total items.
 - Updated About Studio image to a founder-portrait style photo (as requested) for a stronger personal brand presence.
+- Replaced About Studio image with the user-uploaded founder photo asset for brand authenticity.
 
 ## Prioritized Backlog
 ### P0
