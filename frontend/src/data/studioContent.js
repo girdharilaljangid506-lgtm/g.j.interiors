@@ -12,6 +12,14 @@ export const brandConfig = {
   logoUrl: "",
   instagramUrl: "https://www.instagram.com/g.j._interiors_design_studio",
   instagramHandle: "@g.j._interiors_design_studio",
+  contact: {
+    email: "g.j.interiornavsari@gmail.com",
+    phoneRaw: "8955911691",
+    phoneDisplay: "+91 89559 11691",
+    whatsappNumberIntl: "918955911691",
+    address:
+      "Plot No -304 Shiv Shakti Form, NH-48 Near Tajpal Motors, Unn, Navsari, Gujarat (396433)",
+  },
 };
 
 export const heroStats = [

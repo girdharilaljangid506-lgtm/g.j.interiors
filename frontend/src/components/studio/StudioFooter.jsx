@@ -32,6 +32,13 @@ export const StudioFooter = () => {
             <Instagram className="h-4 w-4" />
             <span data-testid="footer-instagram-handle-text">{brandConfig.instagramHandle}</span>
           </a>
+          <a
+            href={`tel:${brandConfig.contact.phoneRaw}`}
+            className="mt-2 block text-xs uppercase tracking-[0.15em] text-studio-text/65 transition-colors duration-300 hover:text-studio-champagne"
+            data-testid="footer-phone-link"
+          >
+            <span data-testid="footer-phone-text">{brandConfig.contact.phoneDisplay}</span>
+          </a>
         </div>
 
         <nav className="flex flex-wrap items-center gap-4" data-testid="footer-nav-links">

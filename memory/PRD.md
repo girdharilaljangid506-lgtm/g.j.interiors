@@ -28,6 +28,7 @@ G.J.INTERIORS DESIGN STUDIO make a website with anemation
 - Added Instagram handle/link in Contact section and Footer: `@g.j._interiors_design_studio`.
 - Updated portfolio messaging to align with Instagram-driven project showcase direction and added direct profile CTA.
 - Added logo-ready structure in Navbar and Footer (`logoUrl` config) so uploaded logo can be plugged in instantly.
+- Replaced contact details with provided business info (phone, email, full Navsari address) and added WhatsApp click-to-chat link.
 
 ## Prioritized Backlog
 ### P0

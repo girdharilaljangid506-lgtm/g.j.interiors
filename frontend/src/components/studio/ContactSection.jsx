@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/sonner";
-import { Instagram } from "lucide-react";
+import { Instagram, MessageCircle } from "lucide-react";
 import { brandConfig, budgetOptions, projectTypeOptions } from "@/data/studioContent";
 
 const initialFormState = {
@@ -70,9 +70,35 @@ export const ContactSection = () => {
           </p>
 
           <div className="space-y-2 border-l border-studio-champagne/40 pl-4" data-testid="contact-info-block">
-            <p className="text-sm text-studio-text/80" data-testid="contact-email-text">Email: hello@gjinteriors.studio</p>
-            <p className="text-sm text-studio-text/80" data-testid="contact-phone-text">Phone: +91 90000 11223</p>
-            <p className="text-sm text-studio-text/80" data-testid="contact-location-text">Location: Ahmedabad, India</p>
+            <a
+              href={`mailto:${brandConfig.contact.email}`}
+              className="block text-sm text-studio-text/80 transition-colors duration-300 hover:text-studio-champagne"
+              data-testid="contact-email-link"
+            >
+              <span data-testid="contact-email-text">Email: {brandConfig.contact.email}</span>
+            </a>
+            <a
+              href={`tel:${brandConfig.contact.phoneRaw}`}
+              className="block text-sm text-studio-text/80 transition-colors duration-300 hover:text-studio-champagne"
+              data-testid="contact-phone-link"
+            >
+              <span data-testid="contact-phone-text">Phone: {brandConfig.contact.phoneDisplay}</span>
+            </a>
+            <p className="text-sm text-studio-text/80" data-testid="contact-location-text">
+              Address: {brandConfig.contact.address}
+            </p>
+
+            <a
+              href={`https://wa.me/${brandConfig.contact.whatsappNumberIntl}`}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 pt-1 text-sm text-studio-champagne transition-colors duration-300 hover:text-white"
+              data-testid="contact-whatsapp-link"
+            >
+              <MessageCircle className="h-4 w-4" />
+              <span data-testid="contact-whatsapp-text">WhatsApp: {brandConfig.contact.phoneDisplay}</span>
+            </a>
+
             <a
               href={brandConfig.instagramUrl}
               target="_blank"
