@@ -1,0 +1,84 @@
+{
+  "theme": {
+    "mode": "dark",
+    "primary_color": "#E5D0AC",
+    "background_color": "#0a0a0a",
+    "secondary_background": "#121212",
+    "text_primary": "#EDEDED",
+    "text_secondary": "#A1A1AA",
+    "accent_color": "#D4AF37",
+    "radius": "0px"
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Playfair Display, serif",
+      "weights": ["400", "700"],
+      "letter_spacing": "-0.02em",
+      "line_height": "1.1"
+    },
+    "body": {
+      "font_family": "Manrope, sans-serif",
+      "weights": ["300", "400", "500"],
+      "letter_spacing": "0.01em",
+      "line_height": "1.6"
+    }
+  },
+  "layout_strategy": {
+    "container_width": "max-w-7xl",
+    "spacing_scale": {
+      "section_padding": "py-24 md:py-32",
+      "element_gap": "gap-8 md:gap-12"
+    },
+    "grid_system": "Bento Grid Mode A (Tetris) - Asymmetric Layouts",
+    "alignment": "Left-aligned mostly, Center for specific dramatic statements"
+  },
+  "ui_components": {
+    "buttons": {
+      "style": "sharp-edges",
+      "variants": {
+        "primary": "bg-[#E5D0AC] text-[#0a0a0a] hover:bg-white transition-colors duration-300 uppercase tracking-widest text-xs font-bold px-8 py-4",
+        "outline": "border border-[#E5D0AC]/30 text-[#E5D0AC] hover:border-[#E5D0AC] hover:bg-[#E5D0AC]/5 transition-all duration-300 uppercase tracking-widest text-xs"
+      }
+    },
+    "cards": {
+      "style": "glassmorphism-dark",
+      "classes": "bg-[#121212]/80 backdrop-blur-md border border-white/5 hover:border-[#E5D0AC]/30 transition-all duration-500 group"
+    },
+    "inputs": {
+      "style": "minimal-underlined",
+      "classes": "bg-transparent border-b border-white/20 focus:border-[#E5D0AC] rounded-none px-0 py-4 placeholder:text-white/30 focus:ring-0 transition-colors"
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "types": {
+      "hero_reveal": "initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}",
+      "scroll_reveal": "initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}",
+      "image_parallax": "scale-110 group-hover:scale-100 transition-transform duration-1000 ease-out"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": "https://images.unsplash.com/photo-1663811396672-83dd3f32f312?q=85&w=1920",
+      "about_team": "https://images.unsplash.com/photo-1748346918817-0b1b6b2f9bab?q=85&w=1080",
+      "portfolio_living": "https://images.unsplash.com/photo-1678686425633-84fc103e2727?q=85&w=1080",
+      "portfolio_kitchen": "https://images.unsplash.com/photo-1761766917170-42c4cecfee0b?q=85&w=1080",
+      "portfolio_bedroom": "https://images.unsplash.com/photo-1553172574-1eb37430181e?q=85&w=1080",
+      "portfolio_exterior": "https://images.unsplash.com/photo-1761442137960-a89d97ab6b27?q=85&w=1080"
+    },
+    "icons": "lucide-react (thin stroke-width={1.5})"
+  },
+  "instructions_to_main_agent": [
+    "Install 'framer-motion' and 'lucide-react' immediately.",
+    "Import Google Fonts in index.css: @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');",
+    "Update tailwind.config.js to include the new colors and fonts.",
+    "Use the 'Bento Grid' layout for the Portfolio section - do NOT make a simple grid of equal squares.",
+    "Implement a 'Smooth Scroll' wrapper if possible, or at least use CSS scroll-behavior: smooth.",
+    "The contact form should look like a high-end invitation, not a SaaS signup form.",
+    "Use the 'Gold' accent color sparingly - only for buttons, active states, and thin borders."
+  ],
+  "UNIVERSAL_GUIDELINES": {
+    "design_philosophy": "Cinematic, moody, high-contrast, asymmetric.",
+    "forbidden": ["Gradients on text", "Rounded buttons (must be sharp or pill)", "Default shadows (use colored glows)", "System fonts"]
+  }
+}
