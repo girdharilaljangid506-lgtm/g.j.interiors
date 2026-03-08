@@ -22,6 +22,27 @@ export const brandConfig = {
   },
 };
 
+export const founderProfile = {
+  name: "GIRDHARI LAL SUTHAR",
+  role: "Founder & Interior Designer",
+  studio: "G.J. Interiors Design Studio",
+  bio: "I am an experienced Interior Designer with over 8 years of professional expertise in creating functional, aesthetic, and customized interior spaces. Based in Navsari, I lead G.J. Interiors Design Studio, where we specialize in delivering high-quality interior design solutions for both residential and commercial projects.",
+  experience: "8 Years",
+  imageUrl:
+    "https://customer-assets.emergentagent.com/job_gj-design-lab/artifacts/3rflf4nj_ChatGPT%20Image%20Mar%208%2C%202026%2C%2008_41_57%20PM.png",
+  specializations: [
+    "Luxury Residential Interiors",
+    "Commercial Space Design",
+    "Turnkey Interior Execution",
+    "Customized Furniture Planning",
+  ],
+  achievements: [
+    "Successfully delivered 120+ interior spaces",
+    "Trusted by clients across Navsari and surrounding regions",
+    "Known for balance of aesthetics, functionality, and timely execution",
+  ],
+};
+
 export const heroStats = [
   { label: "Luxury Spaces Delivered", value: "120+" },
   { label: "Years in Studio Craft", value: "11" },

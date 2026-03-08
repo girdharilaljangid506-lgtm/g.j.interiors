@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { StudioNavbar } from "@/components/studio/StudioNavbar";
 import { HeroSection } from "@/components/studio/HeroSection";
 import { AboutSection } from "@/components/studio/AboutSection";
+import { FounderSection } from "@/components/studio/FounderSection";
 import { ServicesSection } from "@/components/studio/ServicesSection";
 import { PortfolioSection } from "@/components/studio/PortfolioSection";
 import { ProcessSection } from "@/components/studio/ProcessSection";
@@ -20,6 +21,7 @@ function App() {
         <main className="relative z-10" data-testid="studio-main-content">
           <HeroSection />
           <AboutSection />
+          <FounderSection />
           <ServicesSection />
           <PortfolioSection />
           <ProcessSection />
