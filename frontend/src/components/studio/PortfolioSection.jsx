@@ -14,8 +14,6 @@ export const PortfolioSection = () => {
           </h2>
           <a
             href={brandConfig.instagramUrl}
-            target="_blank"
-            rel="noreferrer"
             className="inline-flex items-center border border-studio-champagne/40 px-4 py-2 text-xs uppercase tracking-[0.2em] text-studio-champagne transition-colors duration-300 hover:bg-studio-champagne/10"
             data-testid="portfolio-instagram-profile-link"
           >

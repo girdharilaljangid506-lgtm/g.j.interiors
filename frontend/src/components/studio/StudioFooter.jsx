@@ -24,8 +24,6 @@ export const StudioFooter = () => {
           </p>
           <a
             href={brandConfig.instagramUrl}
-            target="_blank"
-            rel="noreferrer"
             className="mt-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-studio-champagne transition-colors duration-300 hover:text-white"
             data-testid="footer-instagram-link"
           >

@@ -29,6 +29,7 @@ G.J.INTERIORS DESIGN STUDIO make a website with anemation
 - Updated portfolio messaging to align with Instagram-driven project showcase direction and added direct profile CTA.
 - Added logo-ready structure in Navbar and Footer (`logoUrl` config) so uploaded logo can be plugged in instantly.
 - Replaced contact details with provided business info (phone, email, full Navsari address) and added WhatsApp click-to-chat link.
+- Fixed Instagram link behavior by using canonical URL with trailing slash and direct navigation (verified click flow reaches Instagram login/profile path).
 
 ## Prioritized Backlog
 ### P0

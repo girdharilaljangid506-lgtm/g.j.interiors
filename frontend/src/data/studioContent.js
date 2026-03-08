@@ -10,7 +10,7 @@ export const brandConfig = {
   name: "G.J. Interiors",
   fullName: "G.J. Interiors Design Studio",
   logoUrl: "",
-  instagramUrl: "https://www.instagram.com/g.j._interiors_design_studio",
+  instagramUrl: "https://www.instagram.com/g.j._interiors_design_studio/",
   instagramHandle: "@g.j._interiors_design_studio",
   contact: {
     email: "g.j.interiornavsari@gmail.com",

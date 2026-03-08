@@ -101,9 +101,7 @@ export const ContactSection = () => {
 
             <a
               href={brandConfig.instagramUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 pt-2 text-sm text-studio-champagne transition-colors duration-300 hover:text-white"
+              className="mt-2 inline-flex items-center gap-2 text-sm text-studio-champagne transition-colors duration-300 hover:text-white"
               data-testid="contact-instagram-link"
             >
               <Instagram className="h-4 w-4" />
