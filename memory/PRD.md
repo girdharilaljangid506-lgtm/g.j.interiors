@@ -31,6 +31,7 @@ G.J.INTERIORS DESIGN STUDIO make a website with anemation
 - Replaced contact details with provided business info (phone, email, full Navsari address) and added WhatsApp click-to-chat link.
 - Fixed Instagram link behavior by using canonical URL with trailing slash and direct navigation (verified click flow reaches Instagram login/profile path).
 - Added dedicated floating Instagram icon button at right-center for better social engagement and tested click navigation.
+- Integrated SendGrid email notification workflow: every new inquiry now sends an email alert to `g.j.interiornavsari@gmail.com` while still saving inquiry data in MongoDB even if email fails.
 
 ## Prioritized Backlog
 ### P0

@@ -1,9 +1,12 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, BackgroundTasks
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 import os
 import logging
+import html
 from pathlib import Path
 from pydantic import BaseModel, Field, ConfigDict, EmailStr
 from typing import List
@@ -18,6 +21,9 @@ load_dotenv(ROOT_DIR / '.env')
 mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
+sendgrid_api_key = os.environ['SENDGRID_API_KEY']
+sender_email = os.environ['SENDER_EMAIL']
+inquiry_notification_to = os.environ['INQUIRY_NOTIFICATION_TO']
 
 # Create the main app without a prefix
 app = FastAPI()
@@ -57,6 +63,53 @@ class Inquiry(InquiryBase):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
+
+def send_inquiry_notification_email(inquiry_data: dict):
+    escaped_name = html.escape(inquiry_data.get("name", ""))
+    escaped_email = html.escape(inquiry_data.get("email", ""))
+    escaped_phone = html.escape(inquiry_data.get("phone") or "Not provided")
+    escaped_project_type = html.escape(inquiry_data.get("project_type", ""))
+    escaped_budget = html.escape(inquiry_data.get("budget") or "Not provided")
+    escaped_message = html.escape(inquiry_data.get("message", ""))
+    escaped_created_at = html.escape(inquiry_data.get("created_at", ""))
+    escaped_inquiry_id = html.escape(inquiry_data.get("id", ""))
+
+    email_subject = f"New Inquiry Received - {inquiry_data.get('name', 'Client')}"
+    html_content = f"""
+    <html>
+      <body style=\"font-family: Arial, sans-serif; line-height: 1.5;\">
+        <h2 style=\"margin-bottom: 16px;\">New Website Inquiry</h2>
+        <p><strong>Name:</strong> {escaped_name}</p>
+        <p><strong>Email:</strong> {escaped_email}</p>
+        <p><strong>Phone:</strong> {escaped_phone}</p>
+        <p><strong>Project Type:</strong> {escaped_project_type}</p>
+        <p><strong>Budget:</strong> {escaped_budget}</p>
+        <p><strong>Inquiry ID:</strong> {escaped_inquiry_id}</p>
+        <p><strong>Created At:</strong> {escaped_created_at}</p>
+        <hr style=\"margin: 20px 0;\" />
+        <p><strong>Message:</strong></p>
+        <p>{escaped_message}</p>
+      </body>
+    </html>
+    """
+
+    try:
+        mail = Mail(
+            from_email=sender_email,
+            to_emails=inquiry_notification_to,
+            subject=email_subject,
+            html_content=html_content,
+        )
+        sg = SendGridAPIClient(sendgrid_api_key)
+        response = sg.send(mail)
+        logger.info(
+            "SendGrid notification sent for inquiry %s with status %s",
+            inquiry_data.get("id"),
+            response.status_code,
+        )
+    except Exception:
+        logger.exception("SendGrid notification failed for inquiry %s", inquiry_data.get("id"))
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
@@ -88,13 +141,14 @@ async def get_status_checks():
 
 
 @api_router.post("/inquiries", response_model=Inquiry)
-async def create_inquiry(payload: InquiryCreate):
+async def create_inquiry(payload: InquiryCreate, background_tasks: BackgroundTasks):
     inquiry_obj = Inquiry(**payload.model_dump())
 
     doc = inquiry_obj.model_dump()
     doc["created_at"] = doc["created_at"].isoformat()
 
     _ = await db.inquiries.insert_one(doc)
+    background_tasks.add_task(send_inquiry_notification_email, doc)
     return inquiry_obj
 
 
