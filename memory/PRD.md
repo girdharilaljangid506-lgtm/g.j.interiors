@@ -47,6 +47,7 @@ G.J.INTERIORS DESIGN STUDIO make a website with anemation
 - Added public-facing lead actions as requested: contact form + WhatsApp + Call buttons (including floating quick actions).
 - Added launch-readiness branding elements: SEO meta tags, OG/Twitter social preview metadata, favicon, and legal footer links.
 - Added secrets hygiene follow-up: removed raw SendGrid key from `backend/.env` template value (placeholder retained for safe sharing/export).
+- Added user-uploaded official logo across public website branding (navbar + footer).
 
 ## Prioritized Backlog
 ### P0

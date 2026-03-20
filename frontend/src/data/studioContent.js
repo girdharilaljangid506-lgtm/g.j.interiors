@@ -16,7 +16,7 @@ export const legalLinks = [
 export const brandConfig = {
   name: "G.J.INTERIORS DESIGN STUDIO",
   fullName: "G.J.INTERIORS DESIGN STUDIO",
-  logoUrl: "",
+  logoUrl: "https://customer-assets.emergentagent.com/job_gj-design-lab/artifacts/u4ba6y4c_IMG_0165.jpeg",
   instagramUrl: "https://www.instagram.com/g.j._interiors_design_studio/",
   instagramHandle: "@g.j._interiors_design_studio",
   contact: {

@@ -35,7 +35,7 @@ export const StudioNavbar = () => {
             <img
               src={brandConfig.logoUrl}
               alt={`${brandConfig.name} logo`}
-              className="h-10 w-auto object-contain"
+              className="h-12 w-auto border border-white/10 object-contain"
               data-testid="studio-logo-image-navbar"
             />
           ) : null}
