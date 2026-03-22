@@ -27,6 +27,6 @@
   "seed_data_creation": "Created TEST_ inquiry records via API and contact form submission on public preview.",
   "retest_needed": false,
   "should_main_agent_self_test": true,
-  "context_for_next_testing_agent": "Regression baseline: /api/inquiries POST/GET/validation and full route navigation suite (Home/About/Founder/Services/Projects/Testimonials/Contact/Privacy/Terms) passed on https://gj-design-lab.preview.emergentagent.com with no critical runtime/console errors.",
+  "context_for_next_testing_agent": "Regression baseline: /api/inquiries POST/GET/validation and full route navigation suite (Home/About/Founder/Services/Projects/Testimonials/Contact/Privacy/Terms) passed on https://emergent-file-access.preview.emergentagent.com with no critical runtime/console errors.",
   "rca of the issue": "N/A - no functional defects reproduced in requested scope."
 }
